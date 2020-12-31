@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+
+<style  >
+
+#footer {
+   position:absolute;
+   bottom:0;
+      /* Height of the footer */
+   
+}
+
+.form-submit-button {
+
+background: #B9DFFF;
+
+color: #fff;
+
+border: 1px solid #eee;
+
+border-radius: 20px;
+
+box-shadow: 5px 5px 5px #eee;
+
+text-shadow:none;
+font-size: 14px;
+width: 400px ;
+height: 40px;
+}
+
+.form-submit-button:hover {
+
+background: #016ABC;
+
+color: #fff;
+
+border: 1px solid #eee;
+
+border-radius: 20px;
+
+box-shadow: 5px 5px 5px #eee;
+
+text-shadow:none;
+
+}
+
+
+
+</style>
+
+<meta charset="utf-8">
+<title>WAHIB</title>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<body  style="background-image:url('static/flavio-gasperini-GjKPTkhni6Y-unsplash.png');background-size: cover;">
+<div class="container">
+
+<h1 style="color:#B9DFFF"> Spam Classifier</h1>
+
+
+ <br><br>
+ <table>
+   <tr>
+     <td>
+  <form action = "/predict" method = "POST"
+         enctype = "multipart/form-data">
+
+  <label for="w3mission">enter your text:</label>
+<br>
+<textarea id="text" rows="8" cols="50" name="text" text-align="top" >
+</textarea>
+
+<br>
+
+
+  <input type="submit" class="form-submit-button" value="Submit">
+
+</div>
+ </form>
+
+</td>
+
+<td >
+
+
+{% if positive %}
+                  <p><font size="3" color="black">
+                     {{ positive }}
+                     </font></p>
+                  {% endif %}
+
+    {% if pred %}
+                  <p><font size="5" color="black">
+                     {{ pred }}
+                     </font></p>
+                  {% endif %}
+</td>
+  </tr>
+</table>
+
+
+      
+
+                  
+ 
+
+
+
+
+
+<div id="footer">
+
+ <h3>wahib mzali</h3>
+
+ </div>
+
+
+</body>
+</html>
+
